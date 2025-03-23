@@ -1,0 +1,424 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo img {
+    height: 60px; /* Adjust height as needed */
+    width: auto; /* Keeps proportions */
+    display: block;
+}
+
+
+.language select, .sign-in {
+    padding: 8px 15px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.sign-in {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for the box */
+    text-decoration: none; /* Remove underline */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Button-like appearance */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Center align the text */
+}
+
+.sign-in:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+
+.main-content {
+    position: relative;
+    height: 100vh;
+    background: url('images/netflix_bg.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Add black shading overlay */
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0.6, 0, 1, 0.6); 
+    z-index: 1;
+}
+
+.text-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.email {
+    width: 368.75px;
+    height: 56px;
+    color: white; 
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #535352;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.email::placeholder {
+    color: #bbb; 
+    opacity: 1; 
+}
+
+.get_started {
+    font-size: 24px;
+    width: 209.25px;
+    height: 56px;
+    background-color: #E50914;
+    border: 1px solid #E50914;
+    border-radius: 4px;
+    color: white;
+  }
+
+.text-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.background-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 40px;
+
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+/* Styling the Section Title */
+.section-title {
+    text-align: left; /* Align content to the left */
+    margin: 20px 0; /* Add spacing around the section */
+}
+
+.section-title h2 {
+    font-size: 2.5rem; /* Make text bigger */
+    font-weight: bold; /* Make text bold */
+    color: #fff; /* Text color */
+    margin-bottom: 10px; /* Add spacing below the title */
+}
+
+/* Styling Dropdown Filters */
+.section-title .filters select {
+    padding: 8px 12px; /* Add spacing inside the dropdown */
+    font-size: 1rem; /* Make dropdown text bigger */
+    font-weight: bold; /* Make dropdown text bold */
+    border: 1px solid #ddd; /* Add a light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px; /* Spacing between dropdowns */
+    cursor: pointer;
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text */
+}
+
+.section-title .filters select:focus {
+    outline: none;
+    border-color: #e50914; /* Highlight when focused */
+}
+
+
+
+/* Slider Wrapper to show only 5 slides at a time */
+.slider-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden; /* Hide overflowing slides */
+}
+
+/* Slides Wrapper (Flexbox for smooth movement) */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding */
+    gap: 10px; /* Space between slides */
+    overflow-x: visible; /* Allow horizontal overflow */
+}
+
+
+/* Ensure slide container handles relative positioning */
+.slide {
+    position: relative; /* Parent container for absolute children */
+    flex: 0 0 calc(20% - 10px); /* 5 slides visible */
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #111; /* Fallback background color */
+}
+
+/* Image Styling */
+.slide img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+}
+
+/* TOP 10 Badge - Rounded Bottom Left */
+.top10-badge {
+    position: absolute;
+    top: 0; /* Align to the very top */
+    right: 0; /* Align to the right corner */
+    background-color: red; /* Red background */
+    color: white; /* White text color */
+    font-size: 0.8rem; /* Font size for TOP */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Ensure uppercase letters */
+    width: 55px; /* Fixed width */
+    height: 55px; /* Fixed height to form a square */
+    line-height: 1.1; /* Adjust vertical spacing for text */
+    text-align: center; /* Center-align the text */
+    border-bottom-left-radius: 12px; /* Rounded bottom-left corner */
+    z-index: 3; /* Ensure it's on top of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+    padding: 3px; /* Small padding to adjust spacing */
+}
+
+.slide-number {
+    position: absolute;
+    bottom: 10px; /* Align at the bottom */
+    left: 10px; /* Align to bottom-left */
+    font-size: 4.5rem; /* Large font size for prominence */
+    font-weight: bold; /* Bold font */
+    color: black; /* Black number color */
+    -webkit-text-stroke: 2px white; /* White outline around the number */
+    text-shadow: none; /* Remove shadow if not needed */
+    z-index: 3; /* Ensure it appears above the image */
+}
+
+.slide-number:hover {
+    transform: scale(1.1); /* Slight zoom-in on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+/* Recently Added Badge - Center Bottom */
+.recent-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e50914; /* Netflix red color */
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 2; /* Layer below numbers */
+}
+
+
+
+
+.slide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 calc(50% - 10px); /* Show 2 slides on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        flex: 0 0 calc(100% - 10px); /* Show 1 slide on very small screens */
+    }
+}
+
+
+/* Navigation Arrows */
+.arrow {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    z-index: 15;
+    border-radius: 50%;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+
+/* FAQ Section */
+.faq-container {
+    margin: 30px auto; /* Center the container */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* FAQ Item */
+.faq-item {
+    margin-bottom: 10px; /* Space between FAQ items */
+    background-color: #333; /* Box background color */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Prevents spilling */
+    border: 1px solid #222; /* Subtle dark border for separation */
+}
+
+/* FAQ Question */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px; /* Uniform padding for spacing */
+    display: flex;
+    justify-content: space-between; /* Align text and '+' */
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.faq-question span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.faq-question:hover {
+    background-color: #444; /* Slightly lighter on hover */
+}
+
+/* FAQ Answer */
+.faq-answer {
+    background-color: #222; /* Darker shade for contrast */
+    color: #ddd; /* Light text color */
+    padding: 20px; /* Padding for content */
+    display: none; /* Hidden by default */
+    font-size: 1rem;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    color: #aaa;
+}
+
+.footer-links a {
+    color: #aaa;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.footer a {
+    color: #999;
+    font-size: 0.9rem;
+}
+.footer p {
+    margin-bottom: 1.5rem;
+    padding-left: 50px;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding-left: 50px;
+}
+  
+  .footer li {
+    line-height: 1.9;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  .footer-cols ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}

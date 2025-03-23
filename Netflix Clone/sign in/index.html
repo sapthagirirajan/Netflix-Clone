@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Login</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/netflix_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .login-container {
+            position: relative;
+            background: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            background: #333;
+            color: #fff;
+        }
+
+        .login-container .button {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #e50914;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-container .button:hover {
+            background: #f6121d;
+        }
+
+        .login-container .divider {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #b3b3b3;
+            position: relative;
+        }
+
+        .login-container .divider::before,
+        .login-container .divider::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #b3b3b3;
+        }
+
+        .login-container .divider::before {
+            left: 0;
+        }
+
+        .login-container .divider::after {
+            right: 0;
+        }
+
+        .login-container a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+
+        .login-container .help-links {
+            margin-top: 10px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login-container .signup {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-container .signup a {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .login-container .signup a:hover {
+            text-decoration: underline;
+        }
+
+        .login-container .captcha {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        .login-container .captcha a {
+            color: #b3b3b3;
+            text-decoration: underline;
+        }
+
+        .login-container .captcha a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h1>Sign In</h1>
+        <form>
+            <input type="email" placeholder="Email or phone number" required>
+            <input type="password" placeholder="Password" required>
+            <a href="http://127.0.0.1:5500/homescreen/index.html" class="button">Sign In</a>
+        </form>
+        <div class="divider">OR</div>
+        <a href="#">Use a sign-in code</a>
+        <a href="#">Forgot password?</a>
+        <div class="help-links">
+            <span><input type="checkbox" id="remember-me"> <label for="remember-me">Remember me</label></span>
+        </div>
+        <div class="signup">
+            <p>New to Netflix? <a href="#">Sign up now</a>.</p>
+        </div>
+        <div class="captcha">
+            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

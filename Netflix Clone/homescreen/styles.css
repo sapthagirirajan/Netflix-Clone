@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo img {
+  height: 60px; /* Adjust height as needed */
+  width: auto; /* Keeps proportions */
+  display: block;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin-right:500px;
+  gap: 20px;
+  padding: 0;
+}
+
+header nav ul li {
+  cursor: pointer;
+}
+.hero {
+  position: relative;
+  background: url('images/image.png') center/cover no-repeat; /* Replace 'your-image-name.jpg' */
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  padding: 20px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Add spacing from other elements */
+}
+
+.hero-buttons button {
+  padding: 15px 30px; /* Increase padding for bigger buttons */
+  font-size: 20px; /* Larger font size */
+  font-weight: bold; /* Make the text bold */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.play-button {
+  background: white;
+  color: black;
+}
+
+.info-button {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.hero-buttons button:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+  background-color: rgba(255, 255, 255, 0.5); /* Subtle background highlight */
+}
+/* Slider */
+.slider-container {
+  margin: 20px auto;
+  width: 90%;
+  gap: 10px;
+  max-width: 1400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px;
+}
+/* Movie Title Styles */
+.movie-title {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+
+
+.slide {
+  flex: 0 0 calc(20% - 10px);
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #111;
+  display: flex;
+  flex-direction: column; /* Stack image and title vertically */
+  align-items: center; /* Center both image and title */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%; /* Maintain aspect ratio */
+  max-height: 80%; /* Reserve space for the title */
+}
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 15;
+  border-radius: 50%;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slide {
+      flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+      flex: 0 0 calc(100% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 calc(50% - 10px); /* Show 2 slides per row */
+  }
+
+  .movie-title {
+    font-size: 12px;
+  }
+}
